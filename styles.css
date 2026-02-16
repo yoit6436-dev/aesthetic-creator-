@@ -1,11 +1,15 @@
-@font-face {
-  font-family: "PlayfulFont";
-  src: url("playful-font.ttf") format("truetype");
-}
-@font-face {
-  font-family: "ModernFont";
-  src: url("modern-font.ttf") format("truetype");
-}
+/* Fonts */
+@font-face { font-family: "GCGudlakBold"; src: url("gcgudlakdemo-boldd.ttf") format("truetype"); }
+@font-face { font-family: "GCGudlakExtraBold"; src: url("gcgudlakdemo-extraboldd.ttf") format("truetype"); }
+@font-face { font-family: "GCGudlakExtraLight"; src: url("gcgudlakdemo-extralightt.ttf") format("truetype"); }
+@font-face { font-family: "GCGudlakLight"; src: url("gcgudlakdemo-lightt.ttf") format("truetype"); }
+@font-face { font-family: "GCGudlakMedium"; src: url("gcgudlakdemo-mediumm.ttf") format("truetype"); }
+@font-face { font-family: "GCGudlakRegular"; src: url("gcgudlakdemo-regularr.ttf") format("truetype"); }
+@font-face { font-family: "GCGudlakSemiBold"; src: url("gcgudlakdemo-semiboldd.ttf") format("truetype"); }
+@font-face { font-family: "GCGudlakThin"; src: url("gcgudlakdemo-thinn.ttf") format("truetype"); }
+@font-face { font-family: "BabyDoll"; src: url("babydoll.ttf") format("truetype"); }
+@font-face { font-family: "LigemaDemo"; src: url("ligemademo.ttf") format("truetype"); }
+@font-face { font-family: "HagoDemo"; src: url("hagodemo.ttf") format("truetype"); }
 
 body {
   font-family: Arial, sans-serif;
@@ -53,9 +57,7 @@ body {
   border-radius: 10px;
   transition: transform 0.2s;
 }
-.asset-list img:hover {
-  transform: scale(1.1);
-}
+.asset-list img:hover { transform: scale(1.1); }
 
 .color-list div {
   width: 25px;
