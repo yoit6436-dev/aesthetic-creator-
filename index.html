@@ -37,6 +37,21 @@
     <h3>Colors</h3>
     <div id="color-list" class="color-list"></div>
 
+    <h3>Fonts</h3>
+    <select id="font-picker" onchange="changeFont(this.value)">
+      <option value="GCGudlakBold">GCGudlakBold</option>
+      <option value="GCGudlakExtraBold">GCGudlakExtraBold</option>
+      <option value="GCGudlakExtraLight">GCGudlakExtraLight</option>
+      <option value="GCGudlakLight">GCGudlakLight</option>
+      <option value="GCGudlakMedium">GCGudlakMedium</option>
+      <option value="GCGudlakRegular">GCGudlakRegular</option>
+      <option value="GCGudlakSemiBold">GCGudlakSemiBold</option>
+      <option value="GCGudlakThin">GCGudlakThin</option>
+      <option value="BabyDoll">BabyDoll</option>
+      <option value="LigemaDemo">LigemaDemo</option>
+      <option value="HagoDemo">HagoDemo</option>
+    </select>
+
     <h3>AI Stickers</h3>
     <input type="text" id="ai-prompt" placeholder="Enter prompt">
     <button onclick="generateAISticker(event)">Generate</button>
