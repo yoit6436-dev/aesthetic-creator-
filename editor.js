@@ -47,26 +47,32 @@ function addSticker(url){
 }
 
 // Text
-function addText(color="#333"){
-  const text=new fabric.Textbox("Your Text Here",{left:100,top:100,fontSize:30,fill:color,fontFamily:"PlayfulFont"});
+function addText(color="#333", fontName="GCGudlakRegular"){
+  const text = new fabric.Textbox("Your Text Here",{
+    left: 100,
+    top: 100,
+    fontSize: 30,
+    fill: color,
+    fontFamily: fontName
+  });
   canvas.add(text);
   canvas.setActiveObject(text);
 }
 
 // Export
 function exportPNG(){
-  const dataURL=canvas.toDataURL({format:'png',quality:1});
-  const link=document.createElement('a');
-  link.href=dataURL;
-  link.download='aesthetic_design.png';
+  const dataURL = canvas.toDataURL({format:'png',quality:1});
+  const link = document.createElement('a');
+  link.href = dataURL;
+  link.download = 'aesthetic_design.png';
   link.click();
 }
 
 // AI Sticker placeholder
 function generateAISticker(event){
   const prompt=document.getElementById('ai-prompt').value;
-  if(!prompt)return alert("Enter a prompt!");
-  alert("AI Sticker generation will appear here after backend integration: "+prompt);
+  if(!prompt) return alert("Enter a prompt!");
+  alert("AI Sticker generation placeholder: "+prompt);
 }
 
 // Style Presets
@@ -77,4 +83,13 @@ function setStyle(type){
     case "vaporwave": canvas.backgroundColor="#dcd0ff"; break;
   }
   canvas.renderAll();
+}
+
+// Font picker
+function changeFont(fontName){
+  const active = canvas.getActiveObject();
+  if(active && active.type === 'textbox'){
+    active.set('fontFamily', fontName);
+    canvas.renderAll();
+  }
 }
