@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aesthetic Creator - Pinterest Style</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+</head>
+<body>
+
+<header class="hero">
+  <h1>Aesthetic Creator</h1>
+  <p>Create Pinterest-style art instantly!</p>
+</header>
+
+<div class="container">
+
+  <!-- Canvas -->
+  <div class="canvas-section">
+    <canvas id="editor-canvas" width="900" height="600"></canvas>
+    <div class="canvas-controls">
+      <button onclick="addText()">Add Text</button>
+      <button onclick="exportPNG()">Export PNG</button>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+    <h3>Templates</h3>
+    <div id="template-list" class="asset-list"></div>
+
+    <h3>Stickers</h3>
+    <div id="sticker-list" class="asset-list"></div>
+
+    <h3>Colors</h3>
+    <div id="color-list" class="color-list"></div>
+
+    <h3>AI Stickers</h3>
+    <input type="text" id="ai-prompt" placeholder="Enter prompt">
+    <button onclick="generateAISticker(event)">Generate</button>
+    <div id="ai-stickers" class="asset-list"></div>
+
+    <h3>Style Presets</h3>
+    <div class="preset-list">
+      <button onclick="setStyle('pastel')">Pastel</button>
+      <button onclick="setStyle('retro')">Retro</button>
+      <button onclick="setStyle('vaporwave')">Vaporwave</button>
+    </div>
+
+  </aside>
+</div>
+
+<script src="editor.js"></script>
+</body>
+</html>
